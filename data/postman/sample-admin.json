@@ -1,0 +1,465 @@
+{
+	"info": {
+		"_postman_id": "ab3ed38d-03dc-4ec7-ae5d-9ab114dcad05",
+		"name": "new-admin-template",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "http://localhost:5000/api/users/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\" : {\n        \"user_name\" : \"kumar\",\n        \"user_email\" : \"kumar@gmail.com\",\n        \"user_password\" : \"kumar123212\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						},
+						"description": "register user \n\n\n{\n    \"data\" : {\n        \"user_name\" : \"\",\n        \"user_email\": \"\",\n        \"user_password\" : \"\"\n    }\n}"
+					},
+					"response": []
+				},
+				{
+					"name": "{{BASE_URL}}/api/users/get-users",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDE5NjM4MDMsImV4cCI6MTYwMjA1MDIwM30.TQFjdRqpSKdZG4Uja00Rl5BsJKqAHUQuxsojGJ9J7QE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/api/users/get-users",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"get-users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{BASE_URL}}/api/users/get-login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\" : {\n        \"email\" : \"kiran@gmail.com\",\n        \"password\" : \"kiran12343\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/users/get-login",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"get-login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{BASE_URL}}/api/users/forget-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\" : {\n        \"email\" : \"kiranbhatkv@gmail.com\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/users/forget-password",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"forget-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{BASE_URL}}/api/users/checkOtpSessionValidity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\" : {\n        \"otp\" : 195971\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/users/checkOtpSessionValidity",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"checkOtpSessionValidity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{BASE_URL}}/api/users/reset-password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\" : {\n        \"user_id\" : 1,\n        \"user_password\" : \"kiranbhat12341\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/users/reset-password",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"reset-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{BASE_URL}}/api/users/delete-user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDE5NjM4MDMsImV4cCI6MTYwMjA1MDIwM30.TQFjdRqpSKdZG4Uja00Rl5BsJKqAHUQuxsojGJ9J7QE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\" : {\n        \"user_id\" : 4\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/users/delete-user",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"delete-user"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "cards",
+			"item": [
+				{
+					"name": "{{BASE_URL}}/api/cards/get-cards",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDE5NjM4MDMsImV4cCI6MTYwMjA1MDIwM30.TQFjdRqpSKdZG4Uja00Rl5BsJKqAHUQuxsojGJ9J7QE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/api/cards/get-cards",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"cards",
+								"get-cards"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{BASE_URL}}/api/cards/delete-card",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDE5NjM4MDMsImV4cCI6MTYwMjA1MDIwM30.TQFjdRqpSKdZG4Uja00Rl5BsJKqAHUQuxsojGJ9J7QE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\" : {\n        \"card_id\" : 1\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/cards/delete-card",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"cards",
+								"delete-card"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "{{BASE_URL}}/api/tasks/add-tasks",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDE5NjM4MDMsImV4cCI6MTYwMjA1MDIwM30.TQFjdRqpSKdZG4Uja00Rl5BsJKqAHUQuxsojGJ9J7QE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\" : {\n        \"task_name\" : \"task 2\", \n        \"task_desc\" : \"task 2\", \n        \"from_card\" : 1, \n        \"current_card\" : 1, \n        \"task_state\" : \"alltasks\", \n        \"from_card_state\" : \"unchecked\", \n        \"current_card_state\" : \"unchecked\",\n        \"from_card_name\" : \"alltasks\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/tasks/add-tasks",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"add-tasks"
+							]
+						},
+						"description": "let {data} = await axios({\n            method: \"POST\",\n            url: ADD_TASK,\n            data : {\n               data  :data1\n            },\n            headers : {\n                authorization : sessionStorage.getItem('token')\n            }\n        });"
+					},
+					"response": []
+				},
+				{
+					"name": "{{BASE_URL}}/api/tasks/delete-tasks",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDE5NjM4MDMsImV4cCI6MTYwMjA1MDIwM30.TQFjdRqpSKdZG4Uja00Rl5BsJKqAHUQuxsojGJ9J7QE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\" : {\n        \"task_id\" : 2\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/tasks/delete-tasks",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"delete-tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{BASE_URL}}/api/tasks/update-current-state",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDE5NjM4MDMsImV4cCI6MTYwMjA1MDIwM30.TQFjdRqpSKdZG4Uja00Rl5BsJKqAHUQuxsojGJ9J7QE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\" : {\n        \"task_id\" : 1,\n        \"state\" : \"checked\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/tasks/update-current-state",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"update-current-state"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{BASE_URL}}/api/tasks/get-Tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/tasks/get-Tasks",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"get-Tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{BASE_URL}}/api/tasks/get-task-by-card-id?card_id=1",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/tasks/get-task-by-card-id?card_id=1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"get-task-by-card-id"
+							],
+							"query": [
+								{
+									"key": "card_id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "let {data} = await axios({\n            method: \"GET\",\n            url: GET_TASKS_BY_CARD_ID,\n            params : {\n                card_id\n            },\n            headers : {\n                authorization : sessionStorage.getItem('token')\n            }\n        })"
+					},
+					"response": []
+				},
+				{
+					"name": "{{BASE_URL}}/api/tasks/move-task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"data\" : {\n        \"task_state\" : \"errored\",\n        \"from_card\" : 1,\n        \"current_card\" : 2,\n        \"from_card_state\" : \"checked\",\n        \"current_card_state\" : \"unchecked\",\n        \"task_id\" : 1,\n        \"from_card_name\" : \"alltasks\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/tasks/move-task",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"move-task"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
